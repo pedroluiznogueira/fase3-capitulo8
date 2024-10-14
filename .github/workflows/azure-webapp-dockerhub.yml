@@ -35,7 +35,7 @@ jobs:
           docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:latest .
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/myapp:latest
 
-      # Step 6: Deploy the Docker image to Azure Web App
+      # Step 6: Deploy the image to Azure Web App
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
